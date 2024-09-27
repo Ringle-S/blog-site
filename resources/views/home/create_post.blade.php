@@ -14,13 +14,14 @@
     }
     .div_center{
         text-align: start;
-        padding: 10px 30%;
+        margin-top: 20px;
+        /* padding: 10px 30%; */
         display: flex;
         flex-direction: column;
     }
     label{
         display: inline-block;
-        width: 300px;
+        /* width: 300px; */
     }
     </style>
    </head>
@@ -38,8 +39,8 @@
 
         @endif
         <h1 class="post_title">Add Post</h1>
-        <div >
-            <form action="{{url('user_post')}}" method="POST" enctype="multipart/form-data">
+        <div class="d-flex justify-center">
+            <form class="col-10 col-md-6 d-flex flex-col" action="{{url('user_post')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="div_center">
                     <label for="title">Post Title</label>

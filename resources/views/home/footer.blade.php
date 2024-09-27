@@ -1,8 +1,9 @@
 <div style="margin-top: 60px;" class="footer_section layout_padding">
          <div class="container">
-            <div class="input_btn_main">
+            <form class="input_btn_main">
+               
                <input style="margin-left: 20px;" type="text" class="mail_text" placeholder="Enter your email" name="Enter your email" required>
-               <div class="subscribe_bt"><button style="  width: 170px;
+               <div class="subscribe_bt"><button type="submit" style="  width: 170px;
     float: left;
     font-size: 18px;
     color: #2b2278;
@@ -11,7 +12,8 @@
     text-align: center;
     font-weight: 500;
     text-transform: uppercase;">Subscribe</button></div>
-            </div>
+    
+            </form>
           
             <div class="location_main">
             

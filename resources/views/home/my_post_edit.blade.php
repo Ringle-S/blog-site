@@ -14,13 +14,14 @@
     }
     .div_center{
         text-align: start;
-        padding: 10px 30%;
+        margin-top: 20px;
+        /* padding: 10px 30%; */
         display: flex;
         flex-direction: column;
     }
     label{
         display: inline-block;
-        width: 300px;
+        /* width: 300px; */
     }
     </style>
    </head>
@@ -38,8 +39,8 @@
 
         @endif
         <h1 class="post_title">Edit Post</h1>
-        <div>
-            <form action="{{url('update_my_post',$post->id)}}" method="POST" enctype="multipart/form-data">
+        <div class="d-flex justify-center">
+            <form class="col-10 col-md-6  col-lg-4  d-flex flex-col" action="{{url('update_my_post',$post->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="div_center">
                     <label style="text-align: center; width:100%" for="oldimgae">Old Image</label>
