@@ -40,7 +40,7 @@
         @endif
         <h1 class="post_title">Add Post</h1>
         <div class="d-flex justify-center">
-            <form class="col-10 col-md-6 d-flex flex-col" action="{{url('user_post')}}" method="POST" enctype="multipart/form-data">
+            <form class="col-10 col-md-6 col-lg-4 d-flex flex-col" action="{{url('user_post')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="div_center">
                     <label for="title">Post Title</label>

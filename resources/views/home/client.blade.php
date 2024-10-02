@@ -33,7 +33,7 @@
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="client_img"><img src="images/image4 1.png"></div>
                                  <div class="quick_icon"><img src="images/quick-icon.png"></div>
                               </div>
                               <div class="client_taital_right">
@@ -50,7 +50,7 @@
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="client_img"><img src="images/client-img1.png"></div>
                                  <div class="quick_icon"><img src="images/quick-icon.png"></div>
                               </div>
                               <div class="client_taital_right">

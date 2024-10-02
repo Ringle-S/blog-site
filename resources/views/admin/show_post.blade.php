@@ -70,7 +70,11 @@
             <td>{{$post->usertype}}</td>
             <td><a href="{{url('delete_post',$post->id)}}" onclick="return confirm('Are you Sure to Delete this?')" class="btn btn-danger">Delete</a></td>
             <td><a href="{{url('edit_post',$post->id)}}" class="btn btn-success">Edit</a></td>
-            <td><a href="{{url('accept_post',$post->id)}}" class="btn btn-success">Accept</a></td>
+            <td>
+    <a href="{{ url('accept_post', $post->id) }}" class="btn btn-success" {{ $post->post_status === 'active' ? 'disabled' : '' }}>
+        Accept
+    </a>
+</td>
             <td><a href="{{url('reject_post',$post->id)}}"  onclick="return confirm('Are you Sure to Reject this?')" class="btn btn-outline-danger">Reject</a></td>
         </tr>
         @endforeach
