@@ -10,6 +10,7 @@
         text-align: center;
         padding: 30px;
     }
+   
     .table_DEG{
         border: 1px solid #ffffff;
         width: 95%;
@@ -26,6 +27,7 @@
     td{
         padding: 9px 8px;
     }
+    
  </style>
   </head>
   <body>
@@ -55,9 +57,9 @@
         <th>post Status</th>
         <th>User type</th>
         <th>Delete</th>
-        <th>update</th>
-        <th>Accept</th>
-        <th>Reject</th>
+        <th>Update</th>
+        <th>Status</th>
+        
         </tr>
         @foreach ($post as $post)
         
@@ -70,12 +72,12 @@
             <td>{{$post->usertype}}</td>
             <td><a href="{{url('delete_post',$post->id)}}" onclick="return confirm('Are you Sure to Delete this?')" class="btn btn-danger">Delete</a></td>
             <td><a href="{{url('edit_post',$post->id)}}" class="btn btn-success">Edit</a></td>
-            <td>
-    <a href="{{url('accept_post', $post->id)}}" class="btn btn-success" {{ $post->post_status === 'active' ? 'disabled' : '' }}>
+            <td style="margin-top: 30px;" class="{{ $post->post_status == 'active' ? 'd-none' : '' }} {{ $post->post_status == 'pending' ? 'd-flex' : '' }}  {{ $post->post_status == 'rejected' ? 'd-none' : '' }}">
+    <a href="{{url('accept_post', $post->id)}}" class="btn btn-success" >
         Accept
     </a>
 </td>
-            <td><a href="{{url('reject_post',$post->id)}}"  onclick="return confirm('Are you Sure to Reject this?')" class="btn btn-outline-danger">Reject</a></td>
+            <td style="margin-top: 30px;" class="{{ $post->post_status == 'active' ? 'd-flex' : 'd-none' }}  {{ $post->post_status == 'rejected' ? 'd-none' : '' }}"><a href="{{url('reject_post',$post->id)}}"  onclick="return confirm('Are you Sure to Reject this?')" class="btn btn-outline-danger">Reject</a></td>
         </tr>
         @endforeach
     </table>

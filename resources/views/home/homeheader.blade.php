@@ -25,13 +25,17 @@ echo "Basename: " . $basename;
 ?>
                   <ul>
                      <li class="active navlinks"><a style="color: aliceblue;" href="{{url('/')}}">Home</a></li>
-                     <li class="navlinks"><a style="color: aliceblue;" href="{{url('contactus')}}">Contact us</a></li>
+                     <li class="navlinks {{$basename == 'contactus' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('contactus')}}">Contact us</a></li>
                      
-                     <li class="navlinks"><a style="color: aliceblue;" href="{{url('my_blog')}}">My Blog</a></li>
-                     <li class="navlinks"><a style="color: aliceblue;" href="{{url('create_post')}}">Write a Blog</a></li>
+                     <li class="navlinks {{$basename == 'my_blog' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('my_blog')}}">My Blog</a></li>
+                     <li class="navlinks {{$basename == 'create_post' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('create_post')}}">Write a Blog</a></li>
                    
                   </ul>
                   <style>
+                     .activelink{
+                        color: #ffffff !important;
+                        background-color: #2b2278 !important;
+                     }
                      .log-btn{
                         margin-left: 100px;
                      }
@@ -65,10 +69,10 @@ echo "Basename: " . $basename;
                
                   <ul>
                      <li class="active"><a href="{{url('/')}}">Home</a></li>
-                     <li><a href="{{url('contactus')}}">Contact us</a></li>
+                     <li class="{{$basename == 'contactus' ? 'activelink' : ''}}"><a href="{{url('contactus')}}">Contact us</a></li>
                      
-                     <li><a href="{{url('my_blog')}}">My Blog</a></li>
-                     <li><a href="{{url('create_post')}}">Write a Blog</a></li>
+                     <li class="{{$basename == 'my_blog' ? 'activelink' : ''}}"><a href="{{url('my_blog')}}">My Blog</a></li>
+                     <li class="{{$basename == 'create_post' ? 'activelink' : ''}}"><a href="{{url('create_post')}}">Write a Blog</a></li>
                    
                   </ul>
                   <ul style="margin-left: 100px;">
