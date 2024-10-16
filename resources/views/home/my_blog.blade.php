@@ -22,6 +22,10 @@
         display: inline-block;
         width: 300px;
     }
+    .blogimg{
+        width: 100%;
+        height: 350px;
+    }
     </style>
    </head>
    <body>
@@ -41,10 +45,10 @@
         @endif
         
         @foreach ($data as $post)
-        <div class="row d-flex justify-center">
+        <div class=" d-flex justify-center">
         
                 <div  style="margin-top:0px; margin-bottom:30px; text-align: center;"  class="col-md-7">
-                      <div><img style="padding: 20px;" src="/postimage/{{$post->image}}" class="services_img"></div>
+                      <div><img style="padding: 20px;" src="/postimage/{{$post->image}}" class="blogimg"></div>
                      <div><h2 style="font-size: 32px;"><b>{{$post->title}}</b></h2></div>
                      <div><h4 style="font-size: 20px;">{{$post->description}}</h4></div>
                      <div style="margin-top: 20px;"class="row">
@@ -57,10 +61,10 @@
                      </div>
                      
                 </div>
-                @endforeach
+           
         </div>
-        </div>
-
+        @endforeach
+        
       <!-- choose section end -->
       <!-- footer section start -->
       @include('home.footer')  

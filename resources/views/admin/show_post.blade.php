@@ -72,7 +72,7 @@
             <td>{{$post->usertype}}</td>
             <td><a href="{{url('delete_post',$post->id)}}" onclick="return confirm('Are you Sure to Delete this?')" class="btn btn-danger">Delete</a></td>
             <td><a href="{{url('edit_post',$post->id)}}" class="btn btn-success">Edit</a></td>
-            <td style="margin-top: 30px;" class="{{ $post->post_status == 'active' ? 'd-none' : '' }} {{ $post->post_status == 'pending' ? 'd-flex' : '' }}  {{ $post->post_status == 'rejected' ? 'd-none' : '' }}">
+            <td style="margin-top: 30px;" class="{{ $post->post_status == 'active' ? 'd-none' : '' }} {{ $post->post_status == 'pending' ? 'd-flex' : '' }}  {{ $post->post_status == 'rejected' ? 'd-flex' : '' }}">
     <a href="{{url('accept_post', $post->id)}}" class="btn btn-success" >
         Accept
     </a>
