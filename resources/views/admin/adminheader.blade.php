@@ -16,7 +16,7 @@
             <!-- Navbar Header--><a href="index.html" class="navbar-brand">
               <img src="/logo.svg" alt=""></a>
             <!-- Sidebar Toggle Btn-->
-            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+            <!-- <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button> -->
           </div>
           <div class="right-menu list-inline no-margin-bottom">    
         
@@ -27,9 +27,9 @@
             <!-- Log out -->
             <div class="list-inline-item logout">              
                  
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('logout') }}" class="text-white">
                             @csrf
-
+                            <i class="fa fa-long-arrow-right"></i>
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">

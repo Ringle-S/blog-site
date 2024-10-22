@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Request;
 $currentUrl = Request::fullUrl();
 $basename = basename($currentUrl);
 
-echo "Current URL: " . $currentUrl . "<br>";
-echo "Basename: " . $basename;
+// echo "Current URL: " . $currentUrl . "<br>";
+// echo "Basename: " . $basename;
 
 ?>
                   <ul>
-                     <li class="active navlinks"><a style="color: aliceblue;" href="{{url('/')}}">Home</a></li>
+                     <li class="active navlinks{{$basename == '127.0.0.1:8000' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('/')}}">Home</a></li>
                      <li class="navlinks {{$basename == 'contactus' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('contactus')}}">Contact us</a></li>
                      
                      <li class="navlinks {{$basename == 'my_blog' ? 'activelink' : ''}}"><a style="color: aliceblue;" href="{{url('my_blog')}}">My Blog</a></li>
@@ -68,7 +68,7 @@ echo "Basename: " . $basename;
                <div class="menu_main">
                
                   <ul>
-                     <li class="active"><a href="{{url('/')}}">Home</a></li>
+                     <li class="{{$basename == '127.0.0.1:8000' ? 'activelink' : ''}}"><a href="{{url('/')}}">Home</a></li>
                      <li class="{{$basename == 'contactus' ? 'activelink' : ''}}"><a href="{{url('contactus')}}">Contact us</a></li>
                      
                      <li class="{{$basename == 'my_blog' ? 'activelink' : ''}}"><a href="{{url('my_blog')}}">My Blog</a></li>
